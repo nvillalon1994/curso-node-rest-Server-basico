@@ -7,7 +7,14 @@ const {
   usuariosDelete,
 } = require("../controllers/usuarios.controller");
 const { check } = require("express-validator");
-const validarCampos = require("../middlewares/validar-campos");
+
+
+const {validarCampos,
+  validarJWT,
+  esAdminRole,
+  tieneRol
+}=require('../middlewares/index')
+
 const { esRoleValido, emailExiste, existeUsuarioPorId, isNumber } = require("../helpers/db-validators");
 
 
@@ -44,6 +51,9 @@ router.put("/:id",[
 router.patch("/", usuariosPatch);
 
 router.delete("/:id",[
+  validarJWT,
+  // esAdminRole,
+  tieneRol('ADMIN_ROLE','VENTAS_ROLE'),
   check('id',"No es un ID valido").isMongoId(),
   check('id').custom(existeUsuarioPorId),
   validarCampos,
