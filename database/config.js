@@ -7,8 +7,8 @@ const dbConnection =async()=>{
        await mongoose.connect( "mongodb+srv://user_node_cafe2:8xXZDZHmo4GMAhEc@miclustercafe.fty7zh2.mongodb.net/test", {
         useNewUrlParser: true,
         useUnifiedTopology:true,
-        useCreateIndex:true,
-        useFindAndModify:false
+        //useCreateIndex:true,
+        //useFindAndModify:false
        } )
 
        console.log('Base de datos online')
