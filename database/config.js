@@ -4,7 +4,7 @@ const dbConnection =async()=>{
 
     try {
 
-       await mongoose.connect( process.env.MONGODB_CNN, {
+       await mongoose.connect( "mongodb+srv://user_node_cafe2:8xXZDZHmo4GMAhEc@miclustercafe.fty7zh2.mongodb.net/test", {
         useNewUrlParser: true,
         useUnifiedTopology:true,
         useCreateIndex:true,
