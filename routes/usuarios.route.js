@@ -42,6 +42,8 @@ router.post(
 );
 
 router.put("/:id",[
+  validarJWT,
+  tieneRol('ADMIN_ROLE','VENTAS_ROLE'),
   check('id',"No es un ID valido").isMongoId(),
   check('id').custom(existeUsuarioPorId),
   check("rol").custom(esRoleValido),
