@@ -31,7 +31,7 @@
          //Google Token : ID_TOKEN
 
          const body = { id_token: response.credential }
-         fetch('http://localhost:8080/api/auth/google', {
+         fetch('https://curso-node-rest-server-basico-production-0e6c.up.railway.app/api/auth/google', {
             method: "Post",
             headers: {
                'Content-Type': 'application/json'
