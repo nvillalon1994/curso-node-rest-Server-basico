@@ -32,6 +32,7 @@
 
          const body = { id_token: response.credential }
          fetch('http://localhost:8080/api/auth/google', {
+         
             method: "Post",
             headers: {
                'Content-Type': 'application/json'
