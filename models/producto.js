@@ -7,6 +7,9 @@ const ProductoSchema = Schema({
         required:[true,"El nombre es obligatorio"],
         unique:true
     },
+    img:{
+        type:String
+    },
     estado:{
         type:Boolean,
         default:true,
