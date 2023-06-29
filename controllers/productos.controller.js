@@ -67,12 +67,13 @@ const crearProducto = async (req,res=response) =>{
     const data ={
         nombre:body.nombre.toUpperCase(),
         ...body,
-        usuario: req.usuario._id
+        usuario: req.usuario._id,
+
     }
     
-
+    console.log(body)
     const producto = new Producto(data)
-
+ 
     //Guardar en base de datos
     await producto.save()
 

@@ -10,7 +10,7 @@ const esCategoriaValida =async (req,res=response,next) => {
     if (!categoriaDb) {
         
         return  res.status(400).json({
-            msg:`La categoria ${req.body.categoria.toUpperCase()} no esta registrado en la base de datos`
+            msg:`La categoria  no esta registrado en la base de datos`
         })
     }
 

@@ -48,9 +48,11 @@ router.put("/:id",[
     esAdminRole,
     check("id","El id no es válido").isMongoId(),
     check("id").custom(existeProducto),
-    esCategoriaValida,
+    // esCategoriaValida,
+    // validarCampos ,
     check("categoria","No es id de mongo").isMongoId(),
     validarCampos 
+
 ],actualizarProducto)
 
 //Borrar una categoria por id - privado- cuaquier persona con rol admin
